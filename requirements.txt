@@ -1,0 +1,7 @@
+pandas
+seaborn
+plotly
+sklearn
+yfinance
+pmdarima
+math
