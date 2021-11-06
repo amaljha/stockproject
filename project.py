@@ -14,12 +14,12 @@ import seaborn as sns
 from scipy import stats
 
 from sklearn.linear_model import LinearRegression,Lasso,Ridge
-import pyramid as pm
+
 import pmdarima as pmd
 from pmdarima import auto_arima
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error,r2_score
-import math 
+
 from sklearn.metrics import mean_squared_error
 from math import sqrt
 
