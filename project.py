@@ -133,8 +133,9 @@ else:
                       start= date.today()- timedelta(days = 300), 
                       end=date.today()+ timedelta(days = 1), 
                       progress=False)
+    
+     st.image('moderna.jpg')
      st.video('https://www.youtube.com/watch?v=qb-AAvUP6mQ')
-     st.image('infosys.jpg')
      st.text ('Last 7 days stock data given below -')
      st.text(df.tail(7))
      
