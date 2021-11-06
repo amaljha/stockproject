@@ -29,7 +29,7 @@ st.text('Analyse your stock price here')
 
 
 
-sel_box_var=st.selectbox("Select the stock you want to analyse",['Pfizer','Infosys'],index=0)
+sel_box_var=st.selectbox("Select the stock you want to analyse",['Pfizer','Moderna'],index=0)
 
 if sel_box_var=='Pfizer':
     df = yf.download('PFE', 
@@ -129,11 +129,11 @@ if sel_box_var=='Pfizer':
         
         
 else: 
-     df = yf.download('INFY', 
+     df = yf.download('MRNA', 
                       start= date.today()- timedelta(days = 300), 
                       end=date.today()+ timedelta(days = 1), 
                       progress=False)
-     
+     st.video('https://www.youtube.com/watch?v=qb-AAvUP6mQ')
      st.image('infosys.jpg')
      st.text ('Last 7 days stock data given below -')
      st.text(df.tail(7))
@@ -144,7 +144,7 @@ else:
      plt.figure(figsize=(16,8))
      plt.plot(df["Close"],label='Close Price history')
      plt.legend(loc='upper left', fontsize=10)
-     plt.title("Historical Close price of Infosys",size=30)
+     plt.title("Historical Close price of moderna",size=30)
      fig=st.pyplot()
      
      st.text('Correlation Matrix of Infosys')
@@ -216,7 +216,7 @@ else:
          st.text(model.summary())
          rmse=sqrt(mean_squared_error(validation, forecast))
          st.text("Root-mean-square deviation - "+str(rmse))
-     st.text('Pairplot of Infosys to highlight overall relationship')
+     st.text('Pairplot of Moderna to highlight overall relationship')
      sns.pairplot(df)
      pairplot=st.pyplot()
         
