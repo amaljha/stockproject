@@ -49,6 +49,7 @@ if sel_box_var=='Pfizer':
     plt.legend(loc='upper left', fontsize=10)
     plt.title("Historical Close price of Pfizer",size=30)
     fig=st.pyplot()
+    st.set_option('deprecation.showPyplotGlobalUse', False)
     st.text('Correlation Matrix of Infosys')
     st.text(df.corr())
      
@@ -56,7 +57,7 @@ if sel_box_var=='Pfizer':
     plt.figure(figsize=(5,5))
     sns.heatmap(df.corr(), annot=True)
     heatmap=st.pyplot()
-    
+    st.set_option('deprecation.showPyplotGlobalUse', False)
     
    
      
@@ -154,7 +155,7 @@ else:
      sns.heatmap(df.corr(), annot=True)
      heatmap=st.pyplot()
      
-     
+     st.set_option('deprecation.showPyplotGlobalUse', False)
      
      sel_box_var=st.selectbox("Select Method you want to analyse the stock",['Linear','Auto ARIMA'],index=0)
      if sel_box_var=='Linear':
