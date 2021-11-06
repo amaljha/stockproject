@@ -27,7 +27,7 @@ st.title('Stock Analysis.com')
 
 st.text('Analyse your stock price here')
 
-st.video('https://www.youtube.com/watch?v=nt5sgSnyb1s')
+
 
 sel_box_var=st.selectbox("Select the stock you want to analyse",['Pfizer','Infosys'],index=0)
 
@@ -36,9 +36,9 @@ if sel_box_var=='Pfizer':
                       start= date.today()- timedelta(days = 300), 
                       end=date.today()+ timedelta(days = 1), 
                       progress=False)
-    
+   
     st.image('Pfizer.jpg')
-    
+     st.video('https://www.youtube.com/watch?v=nt5sgSnyb1s')
     st.text ('Last 7 days stock data given below -')
     st.text(df.tail(7))
     
