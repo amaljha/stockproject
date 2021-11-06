@@ -38,7 +38,7 @@ if sel_box_var=='Pfizer':
                       progress=False)
    
     st.image('Pfizer.jpg')
-     st.video('https://www.youtube.com/watch?v=nt5sgSnyb1s')
+    st.video('https://www.youtube.com/watch?v=nt5sgSnyb1s')
     st.text ('Last 7 days stock data given below -')
     st.text(df.tail(7))
     
